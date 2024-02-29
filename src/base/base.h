@@ -61,6 +61,8 @@
 
 /////////////////////////////
 // BASIC TYPES
+#include <stdint.h>
+
 typedef int8_t    s8;  /* 8 bit signed integer */
 typedef int16_t   s16; /* 16 bit signed integer */
 typedef int32_t   s32; /* 32 bit signed integer */
