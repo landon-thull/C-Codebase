@@ -1,6 +1,9 @@
 #ifndef BASE_H
 #define BASE_H
 
+/////////////////////////////
+// CONTEXT CRACKING
+
 // COMPILER DETECTION
 #if defined(_MSC_VER)
 # define COMPILER_CL 1
@@ -42,5 +45,17 @@
 #if !defined(OS_MAC)
 # define OS_MAC 0
 #endif
+
+/////////////////////////////
+// HELPER MACROS
+
+#define ArrayCount(a) (sizeof(a)/sizeof(*(a)))
+
+#define Min(a,b) (((a)<(b))?(a):(b))
+#define Max(a,b) (((a)>(b))?(a):(b))
+
+#define c_linkage_begin extern "C"{
+#define c_linkage_end }
+#define c_linkage extern "C"
 
 #endif
