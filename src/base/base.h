@@ -49,13 +49,27 @@
 /////////////////////////////
 // HELPER MACROS
 
-#define ArrayCount(a) (sizeof(a)/sizeof(*(a)))
+#define ArrayCount(a) (sizeof(a)/sizeof(*(a))) /* returns the number of elements in the array 'a' */
 
-#define Min(a,b) (((a)<(b))?(a):(b))
-#define Max(a,b) (((a)>(b))?(a):(b))
+#define Min(a,b) (((a)<(b))?(a):(b)) /* returns the smaller of two values */
+#define Max(a,b) (((a)>(b))?(a):(b)) /* returns the larger of two values */
 
 #define c_linkage_begin extern "C"{
 #define c_linkage_end }
 #define c_linkage extern "C"
+
+
+/////////////////////////////
+// BASIC TYPES
+typedef int8_t    s8;  /* 8 bit signed integer */
+typedef int16_t   s16; /* 16 bit signed integer */
+typedef int32_t   s32; /* 32 bit signed integer */
+typedef int64_t   s64; /* 64 bit signed integer */
+typedef u_int8_t  u8;  /* 8 bit unsigned integer */
+typedef u_int16_t u16; /* 16 bit unsigned integer */
+typedef u_int32_t u32; /* 32 bit unsigned integer */
+typedef u_int64_t u64; /* 64 bit unsigned integer */
+typedef float     f32; /* 32 bit floating point number */
+typedef double    f64; /* 64 bit floating point number */
 
 #endif
