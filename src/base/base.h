@@ -58,9 +58,9 @@
 #define c_linkage_end }
 #define c_linkage extern "C"
 
-#define global static;
-#define local static;
-#define function static;
+#define global static
+#define local static
+#define function static
 
 /////////////////////////////
 // BASIC TYPES
@@ -79,5 +79,19 @@ typedef double    f64; /* 64-bit floating point number */
 
 /////////////////////////////
 // BASIC CONSTANTS
+
+global s8  s8_min  = (s8)0xff80; /* minimum 8-bit signed integer value */
+global s16 s16_min = (s16)0x8000; /* minimum 16-bit signed integer value */
+global s32 s32_min = (s32)0x80000000; /* minimum 32-bit signed integer value */
+global s64 s64_min = (s64)0x8000000000000000; /* minimum 64-bit signed integer value */
+global s8  s8_max  = (s8)0x7f; /* maximum 8-bit signed integer value */
+global s16 s16_max = (s16)0x7fff; /* maximum 16-bit signed integer value */
+global s32 s32_max = (s32)0x7fffffff; /* maximum 32-bit signed integer value */
+global s64 s64_max = (s64)0x7fffffffffffffff; /* maximum 64-bit signed integer value */
+
+global u8  u8_max  = (u8)0xff; /* maximum 8-bit unsigned integer value */
+global u16 u16_max = (u16)0xffff; /* maximum 16-bit unsigned integer value */
+global u32 u32_max = (u32)0xffffffff; /* maximum 32-bit unsigned integer value */
+global u64 u64_max = (u64)0xffffffffffffffff; /* maximum 64-bit unsigned integer value */
 
 #endif
