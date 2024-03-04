@@ -94,4 +94,70 @@ global u16 u16_max = (u16)0xffff; /* maximum 16-bit unsigned integer value */
 global u32 u32_max = (u32)0xffffffff; /* maximum 32-bit unsigned integer value */
 global u64 u64_max = (u64)0xffffffffffffffff; /* maximum 64-bit unsigned integer value */
 
+/////////////////////////////
+// SYMBOLIC CONSTANTS
+
+typedef enum {
+  Axis_X,
+  Axis_Y,
+  Axis_Z,
+  Axis_W
+} Axis;
+
+typedef enum {
+  Side_Min,
+  Side_Max
+} Side;
+
+typedef enum {
+  Month_Jan,
+  Month_Feb,
+  Month_Mar,
+  Month_Apr,
+  Month_May,
+  Month_Jun,
+  Month_Jul,
+  Month_Aug,
+  Month_Sep,
+  Month_Oct,
+  Month_Nov,
+  Month_Dec
+} Month;
+
+typedef enum {
+  DayOfWeek_Sunday,
+  DayOfWeek_Monday,
+  DayOfWeek_Tuesday,
+  DayOfWeek_Wednesday,
+  DayOfWeek_Thursday,
+  DayOfWeek_Friday,
+  DayOfWeek_Saturday
+} DayOfWeek;
+
+typedef enum {
+  OperatingSystem_Null,
+  OperatingSystem_Windows,
+  OperatingSystem_Linux,
+  OperatingSystem_Mac,
+  OperatingSystem_COUNT
+} OperatingSystem;
+
+typedef enum {
+  Architecture_Null,
+  Architecture_X64,
+  Architecture_X86,
+  Architecture_ARM,
+  Architecture_ARM64,
+  Architecture_COUNT
+} Architecture;
+
+/////////////////////////////
+// SYMBOLIC CONSTANT FUNCTIONS
+
+OperatingSystem operating_system_from_context(void);
+
+char* string_from_operating_system(OperatingSystem os);
+char* string_from_month(Month month);
+char* string_from_day_of_week(DayOfWeek day_of_week);
+
 #endif
