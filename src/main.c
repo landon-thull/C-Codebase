@@ -1,4 +1,5 @@
 #include "base/base.h"
+#include "base/ds.h"
 #include <stdio.h>
 
 #define EvalPrint(x) printf("%s = %d\n", #x, (s32)(x))
@@ -21,6 +22,18 @@ int main() {
 
   char* tuesday_string = string_from_day_of_week(DayOfWeek_Tuesday);
   printf("tuesday = %s\n", tuesday_string);
+
+  DLLNode* node1 = dll_create_node(1);
+  DLLNode* head = node1;
+  dll_push_back(&head, 2);
+  dll_push_front(&head, 3);
+  dll_print(head);
+  dll_delete_node(&head, head->next);
+  dll_print(head);
+  dll_delete_node(&head, head);
+  dll_print(head); 
+  dll_delete_node(&head, head);
+  dll_print(head);
 
   return 0;
 }

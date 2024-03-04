@@ -26,6 +26,8 @@ char* string_from_operating_system(OperatingSystem os) {
     case OperatingSystem_Mac:
     result = "mac";
     break;
+    default:
+    break;
   }
   return result;
 }
@@ -68,6 +70,8 @@ char* string_from_month(Month month) {
     break;
     case Month_Dec:
     result = "december";
+    break;
+    default:
     break;
   }
 
